@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Mis Procesos";
+    var entero = Request.Url.PathAndQuery;
+    var path = entero.Substring(entero.IndexOf('?') + 6);
+    ViewBag.BLUP = path.Substring(0, path.Length - 14);
+}
+
+@*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
+<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+
+<style>
+      table tbody tr td:last-child {
+        display: none;
+    }
+
+    .urlOpen {
+        display: none;
+    }
+
+    .alignCenter {
+        text-align: center;
+    }
+
+    .alignLeft {
+        text-align: left;
+    }
+
+    /*#example thead tr th.sorting::after {
+        content: " ↑↓ ";
+    }
+
+    #example thead tr th.sorting_asc::after {
+        content: " ↑ ";
+    }
+
+    #example thead tr th.sorting_desc::after {
+        content: " ↓ ";
+    }*/
+</style>
+
+<div class="row">
+    <table class="table table-responsive" id="example">
+        <thead>
+            <tr>
+                <th>Procedimiento</th>
+                <th>Nombre Tarea</th>
+                <th>Código Proceso</th>
+                <th>Vencimiento</th>
+                <th>Estado</th>
+                <th>Descripción</th>
+                <th class="urlOpen">ID</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Procedimiento</th>
+                <th>Nombre de Tarea</th>
+                <th>Código del Proceso</th>
+                <th>Fecha Vencimiento</th>
+                <th>Estado de la Tarea</th>
+                <th>Descripción del Proceso</th>
+                <th class="urlOpen">ID</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/app/scriptInbox.js"></script>

@@ -1,0 +1,18 @@
+﻿@helper  DevuelveDatosUsuario(string usr)
+{
+    var dslogin = new ULAPW.ServiceEasyLogin.DSLogin();
+    var svc = new ULAPW.ServiceEasyLogin.WSEasyLoginSoapClient();
+    svc.getUserByNombreCorto(@usr.Substring(3), ref dslogin);
+    var nCorto = dslogin.Tables[1].Rows[0]["NombreCorto"];
+    var email = dslogin.Tables[1].Rows[0]["Email"];
+    var id = dslogin.Tables[1].Rows[0]["Id_Persona"];
+    var estado = dslogin.Tables[1].Rows[0]["Estado"];
+    var tipo = dslogin.Tables[1].Rows[0]["Tipo_Identificacion"];
+    var numero = dslogin.Tables[1].Rows[0]["Numero_Identificacion"];
+    var codGrupoFin = dslogin.Tables[1].Rows[0]["CodGrupoFinanciero"];
+    <p id="usr" style="display:none">
+        Nombre: <b>@nCorto</b> | Email: <b>@email</b> |
+        Id: <b>@id</b> | Estado: <b>@estado</b> | Tipo:<b>@tipo</b> | Número:<b>@numero</b>
+        RUC: <b>@codGrupoFin</b>
+    </p>;
+}

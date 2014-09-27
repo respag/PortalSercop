@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "MuestraImagen";
+}
+
+<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+
+<img src="@ViewBag.ImageData" style="width:175%" />

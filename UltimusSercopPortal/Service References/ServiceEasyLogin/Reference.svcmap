@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="71c4e2aa-376e-4954-9395-6b1d9063c5c3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.9.211/WSEasyLogin/WSEasyLogin.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DSLogin.xsd" MetadataType="Schema" ID="4c16b410-1f9e-41aa-8d8b-87e28f68c8f9" SourceId="1" SourceUrl="http://192.168.9.211/WSEasyLogin/WSEasyLogin.asmx?schema=DSLogin" />
+    <MetadataFile FileName="WSEasyLogin.disco" MetadataType="Disco" ID="53410be2-d060-48c2-8ce2-1e9ed9b10a71" SourceId="1" SourceUrl="http://192.168.9.211/WSEasyLogin/WSEasyLogin.asmx?disco" />
+    <MetadataFile FileName="WSEasyLogin.wsdl" MetadataType="Wsdl" ID="6af53df6-4d9b-477d-85e0-db6e1b2a4f12" SourceId="1" SourceUrl="http://192.168.9.211/WSEasyLogin/WSEasyLogin.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
