@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -24,7 +25,7 @@ namespace ULAPW.Controllers
                 else
                 {
                     if (!flag)
-                        return Redirect("http://192.168.9.212/easywebacceso/EasyLogin/wfLogin.aspx");
+                        return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
                     else
                         return RedirectToAction("Login");
                 }
@@ -56,19 +57,11 @@ namespace ULAPW.Controllers
             if (resp == "ERROR" || resp == "TOKEN_NO_VALIDO" || resp == "TOKEN_EXPIRADO" || resp == "IP_INCORRECTA")
                 return false;
             else
-            {
-                //userLoged = true;
-                ViewBag.Resultado = resp;
+            {   ViewBag.Resultado = resp;
                 ViewBag.Ip = ip;
                 return true;
             }
-            //return true;
         }
-
-        //public ActionResult Redirige()
-        //{
-        //    return View();
-        //}
 
         public ActionResult Inbox(string BLUP, string Aplicacion)
         {
@@ -82,7 +75,7 @@ namespace ULAPW.Controllers
                 else
                 {
                     if (!flag)
-                        return Redirect("http://192.168.9.212/easywebacceso/EasyLogin/wfLogin.aspx");
+                        return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
                     else
                         return RedirectToAction("Login");
                 }
@@ -116,29 +109,26 @@ namespace ULAPW.Controllers
             }
         }
 
-        [OutputCache(Duration=0)]
+        [OutputCache(Duration = 300)]
         public ActionResult MuestraImagen(string processName, int incidente, int version)
         {
-            byte[] bytesGif  = GetImageBytes(processName, incidente, version);
-            if (bytesGif != null)
-            {
-                string imageBase64Data = Convert.ToBase64String(bytesGif);
-                string imageDataURL = string.Format("data:image/png;charset=utf-8;base64,{0}", Convert.ToBase64String(bytesGif));
-                ViewBag.ImageData = imageDataURL;
-            }
+            GetImageBytes(processName, incidente, version);
+            ViewBag.processName = processName;
+            ViewBag.incidente = incidente;
+            ViewBag.version = version;
             return View();
         }
 
-
-        public byte[] GetImageBytes(string processname, int incident, int version)
+        public void GetImageBytes(string processname, int incident, int version)
         {
             byte[] ret;
             Incident.Status status = new Incident.Status();
             status.GetGraphicalStatus(processname, incident, version, out ret);
-
-            return ret;
+            string FileName = null;
+            FileName = ConfigurationManager.AppSettings["PathImages"] + processname + incident + version + ".gif";
+            var fs = new FileStream(FileName, FileMode.Create, FileAccess.Write);
+            fs.Write(ret, 0, ret.Length);
+            fs.Close();
         }
-
-
     }
 }

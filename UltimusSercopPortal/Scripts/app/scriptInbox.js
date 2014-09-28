@@ -2,12 +2,10 @@
 /// <reference path=""~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"/>
  var domain = "soce.int";
  var usr = "alfresco";
- //var codigo ="";
  $(document).ready(function () {
      var flag = true;
-     $.getJSON("http://192.168.110.10/InitiateApi/api/Inbox/" + domain + "/" + usr, function (data) {
+     $.getJSON(addrApi + "api/Inbox/" + domain + "/" + usr, function (data) {
          var obj = data;
-
          var oTable = $('#example').dataTable({
              language: {
                  processing: "Procesando...",
@@ -39,7 +37,6 @@
                      "border": "1px solid silver", "border-radius": "4px", "border-top-right-radius": "0",
                      "border-bottom-right-radius": "0", "height": "34px", "Width": "196px", "position": "relative", "top": "2px"
                  });
-
 
                  // Con el flag evitamos que se cargue la imagen de la lupa cada vez qu ese dibuja la tabla y solo lo hace la primera vez
                  if (flag) {
@@ -81,21 +78,6 @@
              },
              "aLengthMenu": [[2, 5, 10], [2, 5, 10]],
              "iDisplayLength": 5,
-             //"bProcessing": true,
-             //"sAjaxDataProp": "",
-             //"order": [],
-             //"aoColumns": [
-             //     { "mData": "PROCESSNAME" },
-             //     { "mData": "STEPLABEL" },
-             //     { "mData": "CodigoProceso" },
-             //     { "mData": "FechaProgramada" },
-             //     { "mData": "STATUS", "sClass": "alignCenter" },
-             //     { "mData": "ObjetoContratacion" },
-             //     { "mData": "TASKID" }
-             //],
-             //"sAjaxSource": "http://192.168.110.10/InitiateApi/api/Inbox/soce.int/alfresco",
-             //"sServerMethod": "GET",
-             //"binfo": false,
              "aaData": obj,
              "order": [],
              "aoColumns": [

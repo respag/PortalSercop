@@ -5,8 +5,8 @@ var usr = "alfresco";
 
 $(document).ready(function () {
     var flag = true;
-    $.getJSON("http://192.168.110.10/InitiateApi/api/Initiates/" + domain + "/" + usr, function (data) {
-        var obj = jQuery.parseJSON(data)
+    $.getJSON(addrApi + "api/Initiates/" + domain + "/" + usr, function (data) {
+    var obj = jQuery.parseJSON(data)
 
         var oTable = $('#example').dataTable({
             language: {
@@ -39,7 +39,6 @@ $(document).ready(function () {
                     "border": "1px solid silver", "border-radius": "4px", "border-top-right-radius": "0",
                     "border-bottom-right-radius": "0", "height": "34px", "Width": "196px", "position": "relative", "top": "2px"
                 });
-
 
                 // Con el flag evitamos que se cargue la imagen de la lupa cada vez qu ese dibuja la tabla y solo lo hace la primera vez
                 if (flag) {
@@ -84,9 +83,7 @@ $(document).ready(function () {
     $('#example thead, #example tfoot').css({ "background-color": "#202020", "color": "white" });
 
     $('#example').on('click', 'tbody tr', function (event) {
-        // var dir = ($(this).find('td:last').text()).replace('.', 'http://192.168.110.10/UltWeb');
         var tId = ($(this).find('td:last').text()).substring(52, 83);
-        // alert(tId);
         var dir = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + tId;
         window.open(dir, "newWindow", "height=" + screen.height + ", width =" + screen.width);
     });

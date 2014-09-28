@@ -5,7 +5,7 @@ var usr = "alfresco";
 //var codigo = "";
 $(document).ready(function () {
     var flag = true;
-    $.getJSON("http://192.168.110.10/InitiateApi/api/Completed/" + domain + "/" + usr, function (data) {
+    $.getJSON(addrApi + "api/Completed/" + domain + "/" + usr, function (data) {
     var obj = data;
 
     var oTable = $('#example').dataTable({
@@ -39,7 +39,6 @@ $(document).ready(function () {
                 "border": "1px solid silver", "border-radius": "4px", "border-top-right-radius": "0",
                 "border-bottom-right-radius": "0", "height": "34px", "Width": "196px", "position": "relative", "top": "2px"
             });
-
 
             // Con el flag evitamos que se cargue la imagen de la lupa cada vez qu ese dibuja la tabla y solo lo hace la primera vez
             if (flag) {
@@ -84,21 +83,6 @@ $(document).ready(function () {
         },
         "aLengthMenu": [[2, 5, 10], [2, 5, 10]],
         "iDisplayLength": 5,
-        //"bProcessing": true,
-        //"sAjaxDataProp": "",
-        //"order": [],
-        //"aoColumns": [
-        //     { "mData": "PROCESSNAME" },
-        //     { "mData": "STEPLABEL" },
-        //     { "mData": "CodigoProceso" },
-        //     { "mData": "FechaProgramada" },
-        //     { "mData": "STATUS", "sClass": "alignCenter" },
-        //     { "mData": "ObjetoContratacion" },
-        //     { "mData": "TASKID" }
-        //],
-        //"sAjaxSource": "http://192.168.110.10/InitiateApi/api/Completed/soce.int/alfresco",
-        //"sServerMethod": "GET",
-        //"binfo": false,
         "aaData": obj,
         "order": [],
         "aoColumns": [
@@ -142,6 +126,5 @@ $('#example').on('click', 'tbody tr td:first-child', function (event) {
     var nombre = $('#example tbody tr td:nth-child(2)').text();
     var inc = $('#example tbody tr td:nth-child(8)').text()
     var ver = $('#example tbody tr td:nth-child(9)').text();
-    // alert("processName: " + nombre.replace(" ", "+") + '\n' + "Incidente: " + inc + '\n' + "Versión:" + ver);
     location.href = baseURL + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() +"&incidente=" + inc + "&version=" + ver;
 });
