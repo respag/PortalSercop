@@ -6,9 +6,9 @@
 }
 
 @*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
-<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupInitiate" value="~/Home/Initiate" /> @*value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blup" value="~/Home/inbox"/>  @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blupCompleted" value="~/Home/completed" /> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
 
 <style>
     table tbody tr td:last-child {
@@ -56,4 +56,5 @@
 
 <script>
     var addrApi = '@System.Web.Configuration.WebConfigurationManager.AppSettings["AddrApi"]';
+    var ip = '@ViewBag.Ip';
 </script>

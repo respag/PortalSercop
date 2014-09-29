@@ -4,6 +4,7 @@ var domain = "soce.int";
 var usr = "alfresco";
 
 $(document).ready(function () {
+    console.log(ip);
     var flag = true;
     $.getJSON(addrApi + "api/Initiates/" + domain + "/" + usr, function (data) {
     var obj = jQuery.parseJSON(data)

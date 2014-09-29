@@ -6,9 +6,9 @@
 }
 
 @*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
-<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupInitiate" value="~/Home/Initiate" /> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blup" value="~/Home/inbox" /> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blupCompleted" value="~/Home/completed" /> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
 
 <style>
     table tbody tr td:last-child {
@@ -45,7 +45,7 @@
         <thead>
             <tr>
                 <th>Ver Estado</th>
-                <th>Nombre Proceso</th>
+                <th>Procedimiento</th>
                 <th>Nombre Tarea</th>
                 <th>Código Proceso</th>
                 <th>Vencimiento</th>
@@ -59,7 +59,7 @@
         <tfoot>
             <tr>
                 <th>Ver Estado</th>
-                <th>Nombre del Proceso</th>
+                <th>Procedimiento</th>
                 <th>Nombre de Tarea</th>
                 <th>Código del Proceso</th>
                 <th>Fecha Vencimiento</th>

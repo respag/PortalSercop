@@ -69,25 +69,31 @@
              //Esta función permite un " post proceso" de cada fila después de que se ha generado 
              //pero antes de presentarla en la pantalla.
              "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                 // Selecciona el cuarto td para cada fila y le cambia el texto ejecutando
+                 //Agrega a las primeras columnas de cada fila el icono
+                 $('td:eq(0)', nRow).html("<span style='font-size:18px; color:darkblue'><i class='fa fa-picture-o'></i></span>")
+
+                 // Selecciona el quinto td para cada fila y le cambia el texto ejecutando
                  // la funcion devuelveEstadoTarea, pasándole como parámetro el valor de 
                  // la columna Status
-                 $('td:eq(4)', nRow).text(devuelveEstadoTarea(parseInt(aData["STATUS"])));
-                 //Selecciona la tercera columna para cada fila y formatea la fecha en el formato dd/MM/yyyy.
-                 $('td:eq(3)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY'));
+                 $('td:eq(5)', nRow).text(devuelveEstadoTarea(parseInt(aData["STATUS"])));
+                 //Selecciona la cuarta columna para cada fila y formatea la fecha en el formato dd/MM/yyyy.
+                 $('td:eq(4)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY'));
              },
              "aLengthMenu": [[2, 5, 10], [2, 5, 10]],
              "iDisplayLength": 5,
              "aaData": obj,
              "order": [],
              "aoColumns": [
-                   { "mData": "PROCESSNAME" },
-                  { "mData": "STEPLABEL" },
-                  { "mData": "CodigoProceso" },
-                  { "mData": "FechaProgramada" },
-                  { "mData": "STATUS", "sClass": "alignCenter" },
-                  { "mData": "ObjetoContratacion" },
-                  { "mData": "TASKID" }
+                 { "mDataProp": null, bSearchable: false, bSortable: false },
+                 { "mData": "PROCESSNAME" },
+                 { "mData": "STEPLABEL" },
+                 { "mData": "CodigoProceso" },
+                 { "mData": "FechaProgramada" },
+                 { "mData": "STATUS", "sClass": "alignCenter" },
+                 { "mData": "ObjetoContratacion" },
+                 { "mData": "INCIDENT" },
+                 { "mData": "PROCESSVERSION" },
+                 { "mData": "TASKID" }
              ],
          });
      });
@@ -107,8 +113,19 @@ function devuelveEstadoTarea(st){
     }
  }
 
-$('#example').on('click', 'tbody tr', function (event) {
+$('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
     var id = $(this).find('td:last').text();
     var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id;
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
+});
+
+$('#example').on('click', 'tbody tr td:first-child', function (event) {
+    var baseURL = "http://192.168.110.10/PortalSercop/";
+    var nombre = $(this).parent().find("td:nth-child(2)").text(); //$('#example tbody tr td:nth-child(2)').text();
+    var inc = $(this).parent().find("td:nth-child(8)").text(); //$('#example tbody tr td:nth-child(8)').text()
+    var ver = $(this).parent().find("td:nth-child(9)").text(); //$('#example tbody tr td:nth-child(9)').text();
+    location.href = baseURL + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+    //alert($(this).parent().find("td:nth-child(2)").text());
+    //alert($(this).parent().find("td:nth-child(8)").text());
+    //alert($(this).parent().find("td:nth-child(9)").text());
 });

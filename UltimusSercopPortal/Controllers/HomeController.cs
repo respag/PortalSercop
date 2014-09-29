@@ -13,15 +13,24 @@ namespace ULAPW.Controllers
 {
     public class HomeController : Controller
     {
+        bool flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
+
         public ActionResult Index(string BLUP, string Aplicacion)
         {             
             if (BLUP != null && Aplicacion =="MA")
             {
-                var flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
                 var ip = Request.UserHostAddress;
-                
-                if (IsTokenValido(BLUP, ip) )
+
+                // Si el token es válido se crea la cookie usr_logued con el valor true, 
+                // una expiración de 300 segundos - 5 minutos - y se navega a la vista initiate
+                if (IsTokenValido(BLUP, ip))
+                {
+                    var cookie = new HttpCookie("usr_logued", "true");
+                    var tiempoExperacion = ConfigurationManager.AppSettings["ExpiracionEnSegundos"];
+                    cookie.Expires = DateTime.Now.AddSeconds(Convert.ToDouble(tiempoExperacion));
+                    Response.AppendCookie(cookie);
                     return View("Initiate");
+                }
                 else
                 {
                     if (!flag)
@@ -32,7 +41,10 @@ namespace ULAPW.Controllers
             }
             else
             {
-                return View("Login");
+                if (!flag)
+                    return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                else
+                    return RedirectToAction("Login");
             }
         }
 
@@ -41,9 +53,11 @@ namespace ULAPW.Controllers
             return View("Login");
         }
 
-        public ActionResult Initiate(bool userLoged = false)
+        public ActionResult Initiate()//bool userLoged = false)
         {
-            if (userLoged)
+             //if (userLoged)
+             var cookie = Request.Cookies["usr_logued"];
+             if (cookie != null && cookie.Value.ToString()=="true")
                 return View();
              else
                 return RedirectToAction("Login");
@@ -63,50 +77,57 @@ namespace ULAPW.Controllers
             }
         }
 
-        public ActionResult Inbox(string BLUP, string Aplicacion)
+        public ActionResult Inbox()//(string BLUP, string Aplicacion)
         {
-            if (BLUP != null && Aplicacion == "MA")
-            {
-                var flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
-                var ip = Request.UserHostAddress;
+             var cookie = Request.Cookies["usr_logued"];
+             if (cookie != null && cookie.Value.ToString()=="true")
+                return View();
+             else
+            //if (BLUP != null && Aplicacion == "MA")
+            //{
+            //    var ip = Request.UserHostAddress;
 
-                if (IsTokenValido(BLUP, ip))
-                    return View("Inbox");
-                else
+            //    if (IsTokenValido(BLUP, ip))
+             //       return View("Inbox");
+            //    else
                 {
                     if (!flag)
                         return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
                     else
                         return RedirectToAction("Login");
                 }
-            }
-            else
-            {
-                return View("Login");
-            }
+           // }
+            //else
+            //{
+            //    return View("Login");
+            //}
         }
 
-        public ActionResult Completed(string BLUP, string Aplicacion)
+        public ActionResult Completed()//(string BLUP, string Aplicacion)
         {
-            if (BLUP != null && Aplicacion == "MA")
-            {
-                var flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
-                var ip = Request.UserHostAddress;
+            var cookie = Request.Cookies["usr_logued"];
+             if (cookie != null && cookie.Value.ToString()=="true")
+                return View();
+             else
+            //if (BLUP != null && Aplicacion == "MA")
+            //{
+            //   // var flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
+            //    var ip = Request.UserHostAddress;
 
-                if (IsTokenValido(BLUP, ip))
-                    return View("Completed");
-                else
+            //    if (IsTokenValido(BLUP, ip))
+            //        return View("Completed");
+            //    else
                 {
                     if (!flag)
                         return Redirect("http://192.168.9.212/easywebacceso/EasyLogin/wfLogin.aspx");
                     else
                         return RedirectToAction("Login");
                 }
-            }
-            else
-            {
-                return View("Login");
-            }
+            //}
+            //else
+            //{
+            //    return View("Login");
+            //}
         }
 
         [OutputCache(Duration = 300)]

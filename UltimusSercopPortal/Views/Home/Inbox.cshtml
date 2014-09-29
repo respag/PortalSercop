@@ -6,9 +6,9 @@
 }
 
 @*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
-<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupInitiate" value="~/Home/Index"/> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blup" value="~/Home/inbox" /> @*?/BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
+<input type="hidden" id="blupCompleted" value="~/Home/completed" /> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
 
 <style>
       table tbody tr td:last-child {
@@ -44,23 +44,29 @@
     <table class="table table-responsive" id="example">
         <thead>
             <tr>
+                <th>Ver Estado</th>
                 <th>Procedimiento</th>
                 <th>Nombre Tarea</th>
                 <th>Código Proceso</th>
                 <th>Vencimiento</th>
                 <th>Estado</th>
                 <th>Descripción</th>
+                <th>Incidente</th>
+                <th>Versión</th>
                 <th class="urlOpen">ID</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
+                <th>Ver Estado</th>
                 <th>Procedimiento</th>
                 <th>Nombre de Tarea</th>
                 <th>Código del Proceso</th>
                 <th>Fecha Vencimiento</th>
                 <th>Estado de la Tarea</th>
                 <th>Descripción del Proceso</th>
+                <th>Incidente</th>
+                <th>Versión</th>
                 <th class="urlOpen">ID</th>
             </tr>
         </tfoot>
