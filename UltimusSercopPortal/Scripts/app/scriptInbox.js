@@ -114,7 +114,7 @@ function devuelveEstadoTarea(st){
  }
 
 $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
-    var id = $(this).find('td:last').text();
+    var id = $(this).parent().find("td:nth-child(10)").text()
     var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id;
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });

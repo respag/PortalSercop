@@ -3,20 +3,7 @@
     var nombre = ViewBag.processName+ViewBag.incidente+ViewBag.version + ".gif";
 }
 
-<input type="hidden" id="blupInitiate" value="~/Home/Index?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blup" value="~/Home/inbox?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
-<input type="hidden" id="blupCompleted" value="~/Home/completed?BLUP=@ViewBag.BLUP&Aplicacion=MA" />
+<input type="hidden" id="blupInitiate" value="~/Home/Inbox" />
+<input type="hidden" id="blup" value="~/Home/inbox" />
+<input type="hidden" id="blupCompleted" value="~/Home/completed" />
 <img src="~/images/@nombre"/>
-
-@*<img src="@ViewBag.ImageData" style="width:175%" />*@
-@*<img src="@Url.Action("CargaImagen", "Home", new
-     { processName = @ViewBag.processName, incidente = @ViewBag.incidente, version = @ViewBag.version })"
-     alt="En caso de no ver la imagen presione F5" style="width:175%" id="imProc" />
-<script>
-    $(document).ready(function () {
-        setTimeout( function() {
-            $("#imProc").attr("src", $("#imgProc").attr("src") + "http://192.168.110.10/PortalSercop/home/MuestraImagen?processName=" +
-            @ViewBag.processName +"&incidente=" + @ViewBag.incidente + "&version=" + @ViewBag.version);
-        }, 1000);
-    });
-</script>*@

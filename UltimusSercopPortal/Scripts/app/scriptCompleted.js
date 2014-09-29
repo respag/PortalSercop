@@ -85,15 +85,15 @@ $(document).ready(function () {
             "order": [],
             "aoColumns": [
                 { "mDataProp": null, bSearchable: false, bSortable: false },
-                { "mData": "PROCESSNAME" },
-                { "mData": "STEPLABEL" },
-                { "mData": "CodigoProceso" },
-                { "mData": "FechaProgramada" },
-                { "mData": "STATUS", "sClass": "alignCenter" },
-                { "mData": "ObjetoContratacion" },
-                { "mData": "INCIDENT" },
-                { "mData": "PROCESSVERSION" },
-                { "mData": "TASKID" }
+                { "mData": "PROCESSNAME", bSortable: false },
+                { "mData": "STEPLABEL", bSortable: false },
+                { "mData": "CodigoProceso", bSortable: false },
+                { "mData": "FechaProgramada", bSortable: false },
+                { "mData": "STATUS", "sClass": "alignCenter", bSortable: false },
+                { "mData": "ObjetoContratacion", bSortable: false },
+                { "mData": "INCIDENT", bSortable: false },
+                { "mData": "PROCESSVERSION", bSortable: false },
+                { "mData": "TASKID", bSortable: false }
             ],
         });
     });
@@ -114,7 +114,7 @@ function devuelveEstadoTarea(st) {
 }
 
 $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
-    var id = $(this).find('td:last').text();
+    var id = $(this).parent().find("td:nth-child(10)").text()
     var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id;
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });
