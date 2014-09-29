@@ -60,7 +60,12 @@ namespace ULAPW.Controllers
              if (cookie != null && cookie.Value.ToString()=="true")
                 return View();
              else
-                return RedirectToAction("Login");
+             {
+                 if (!flag)
+                     return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                 else
+                     return RedirectToAction("Login");
+             }
         }
 
         private bool IsTokenValido(string token, string ip)
@@ -119,7 +124,7 @@ namespace ULAPW.Controllers
             //    else
                 {
                     if (!flag)
-                        return Redirect("http://192.168.9.212/easywebacceso/EasyLogin/wfLogin.aspx");
+                        return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
                     else
                         return RedirectToAction("Login");
                 }
@@ -137,7 +142,17 @@ namespace ULAPW.Controllers
             ViewBag.processName = processName;
             ViewBag.incidente = incidente;
             ViewBag.version = version;
-            return View();
+            var cookie = Request.Cookies["usr_logued"];
+            if (cookie != null && cookie.Value.ToString() == "true")
+                return View();
+            else
+            {
+                if (!flag)
+                    return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                else
+                    return RedirectToAction("Login");
+            }
+            //return View();
         }
 
         public void GetImageBytes(string processname, int incident, int version)
