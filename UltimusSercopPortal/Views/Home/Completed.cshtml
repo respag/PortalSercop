@@ -1,8 +1,8 @@
 ﻿@{
     ViewBag.Title = "Completados";
-    var entero = Request.Url.PathAndQuery;
-    var path = entero.Substring(entero.IndexOf('?') + 6);
-    ViewBag.BLUP = path.Substring(0, path.Length - 14);
+    //var entero = Request.Url.PathAndQuery;
+    //var path = entero.Substring(entero.IndexOf('?') + 6);
+    //ViewBag.BLUP = path.Substring(0, path.Length - 14);
 }
 
 @*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
@@ -73,7 +73,7 @@
     </table>
 </div>
 
-<script src="~/Scripts/jquery-1.10.2.js"></script>
+@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
 <script src="~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"></script>
 <script src="~/Scripts/moment-with-locales.min.js"></script>
 <script src="~/Scripts/app/scriptCompleted.js"></script>

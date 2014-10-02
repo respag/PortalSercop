@@ -84,8 +84,18 @@ $(document).ready(function () {
     $('#example thead, #example tfoot').css({ "background-color": "#202020", "color": "white" });
 
     $('#example').on('click', 'tbody tr', function (event) {
+        var correo = $("#correo").text();
+        var rol = $("#rol").text();
+        var cedula = $("#cedula").text();
+        var empresa = $("#empresa").text();
+        var tipoEmpresa = ($("#tipoEmpr").text()).trim();
+        var ruc = $("#ruc").text();
         var tId = ($(this).find('td:last').text()).substring(52, 83);
-        var dir = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + tId;
+
+        var dir = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + tId +
+                                  "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa + "&cedula="+ cedula + "&rol=" + rol +
+                                  "&correo=" + correo;
+
         window.open(dir, "newWindow", "height=" + screen.height + ", width =" + screen.width);
     });
 });

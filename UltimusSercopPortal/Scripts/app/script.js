@@ -42,6 +42,9 @@ $(window).resize(function () {
 
 //***************************************************************
 $(document).ready(function () {
+
+    $("#nav-panel").panel("open");
+
     $("a.botones").tooltip({
         placement: 'bottom'
     });
@@ -50,15 +53,33 @@ $(document).ready(function () {
         placement: 'right'
     });
 
+    //$("#linkUsuario").click(function () {
+    //    $().toastmessage('showToast', {
+    //        text: $("#usr").text(),
+    //        sticky: true,
+    //        position: 'top-right',
+    //        type: 'notice',
+    //        closeText: '',
+    //        close: function () { console.log("toast is closed ..."); }
+    //    });
+    //});
+
     $("#linkUsuario").click(function () {
-        $().toastmessage('showToast', {
-            text: $("#usr").text(),
-            sticky: true,
-            position: 'top-right',
-            type: 'notice',
-            closeText: '',
-            close: function () { console.log("toast is closed ..."); }
-        });
+        noty({
+            layout: 'center',
+            type: 'information',
+            text: $("#datos").html(),
+            dismissQueue: true,
+            modal: true,
+            closeWith: ['button'],
+            animation: {
+                open: {height: 'toggle'},
+                close: {height: 'toggle'},
+                easing: 'swing',
+                speed: 500
+            },
+            timeout: 0
+        });     
     });
 
     // Agregamos en los botones (tanto del panel izquierdo como del header un atributo data-href con el link

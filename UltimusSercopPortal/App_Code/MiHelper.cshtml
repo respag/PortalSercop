@@ -1,18 +1,54 @@
-﻿@helper  DevuelveDatosUsuario(string usr)
+﻿@helper DevuelveUsuario(string cadena)
 {
-    var dslogin = new ULAPW.ServiceEasyLogin.DSLogin();
-    var svc = new ULAPW.ServiceEasyLogin.WSEasyLoginSoapClient();
-    svc.getUserByNombreCorto(@usr.Substring(3), ref dslogin);
-    var nCorto = dslogin.Tables[1].Rows[0]["NombreCorto"];
-    var email = dslogin.Tables[1].Rows[0]["Email"];
-    var id = dslogin.Tables[1].Rows[0]["Id_Persona"];
-    var estado = dslogin.Tables[1].Rows[0]["Estado"];
-    var tipo = dslogin.Tables[1].Rows[0]["Tipo_Identificacion"];
-    var numero = dslogin.Tables[1].Rows[0]["Numero_Identificacion"];
-    var codGrupoFin = dslogin.Tables[1].Rows[0]["CodGrupoFinanciero"];
-    <p id="usr" style="display:none">
-        Nombre: <b>@nCorto</b> | Email: <b>@email</b> |
-        Id: <b>@id</b> | Estado: <b>@estado</b> | Tipo:<b>@tipo</b> | Número:<b>@numero</b>
-        RUC: <b>@codGrupoFin</b>
-    </p>;
+    if (cadena != null && cadena != String.Empty)
+    {
+        var arr = cadena.Split('|');
+        var nombre = arr[1];
+        var cedula = arr[2];
+        var Ruc = arr[3];
+        var Rol = arr[4];
+
+        InformationService.ServiceReference.InformationServiceClient client = new InformationService.ServiceReference.InformationServiceClient();
+        var resultado = client.GetDepartmentByRuc(Ruc);
+        var Empresa = resultado.DepartamentName;
+        var TipoEmpresa = resultado.DepartamentType;
+
+        var dslogin = new ULAPW.ServiceEasyLogin.DSLogin();
+        var svc = new ULAPW.ServiceEasyLogin.WSEasyLoginSoapClient();
+        svc.getUserByNombreCorto(@nombre, ref dslogin);
+        var email = dslogin.Tables[1].Rows[0]["Email"];
+
+        @nombre
+        <p id="datos" style="display:none">
+            <span style="font-weight:bold;color:darkblue;font-size:18px;">
+                Usuario: <span id="nombreUsuario">@nombre.ToUpper()</span>
+            </span><br /><br />
+            Email: <span id="correo">@email</span><br />Rol: <span id="rol">@Rol</span>
+            <br />Cedula:<span id="cedula">@cedula</span><br /><br /><br />
+
+            <span style="font-weight:bold;color:darkblue;font-size:18px;">
+                Empresa: <span id="empresa">@Empresa</span>
+            </span><br /><br />
+            Tipo de Empresa: <span id="tipoEmpr">@TipoCompleto(TipoEmpresa)</span> <br />
+            RUC: <span id="ruc">@Ruc</span><br /><br />
+        </p>
+    }
+}
+
+@helper TipoCompleto(string tipoAbrev)
+{
+    var tipoCompleto = "";
+    if (tipoAbrev == "PRO")
+    {
+        tipoCompleto = "Proveedor";
+    }
+    else if (tipoAbrev == "ENT")
+    {
+        tipoCompleto = "Entidad Contratante";
+    }
+    else
+    {
+        tipoCompleto = "Sercop";
+    }
+    <span>@tipoCompleto</span>
 }

@@ -29,6 +29,7 @@ namespace ULAPW.Controllers
                     var tiempoExperacion = ConfigurationManager.AppSettings["ExpiracionEnSegundos"];
                     cookie.Expires = DateTime.Now.AddSeconds(Convert.ToDouble(tiempoExperacion));
                     Response.AppendCookie(cookie);
+
                     return View("Initiate");
                 }
                 else
@@ -57,8 +58,15 @@ namespace ULAPW.Controllers
         {
              //if (userLoged)
              var cookie = Request.Cookies["usr_logued"];
-             if (cookie != null && cookie.Value.ToString()=="true")
-                return View();
+             if (cookie != null && cookie.Value.ToString() == "true")
+             {
+                 var cookie2 = Request.Cookies["respuesta"];
+                 if (cookie2 != null)
+                     ViewBag.Resultado = cookie2.Value.ToString();
+                 else
+                     ViewBag.Resultado = "";
+                 return View();
+             }
              else
              {
                  if (!flag)
@@ -77,6 +85,10 @@ namespace ULAPW.Controllers
                 return false;
             else
             {   ViewBag.Resultado = resp;
+                var cookie2 = new HttpCookie("respuesta", resp);
+                var tiempoExperacion = ConfigurationManager.AppSettings["ExpiracionEnSegundos"];
+                cookie2.Expires = DateTime.Now.AddSeconds(Convert.ToDouble(tiempoExperacion));
+                Response.AppendCookie(cookie2);
                 ViewBag.Ip = ip;
                 return true;
             }
@@ -85,22 +97,29 @@ namespace ULAPW.Controllers
         public ActionResult Inbox()//(string BLUP, string Aplicacion)
         {
              var cookie = Request.Cookies["usr_logued"];
-             if (cookie != null && cookie.Value.ToString()=="true")
-                return View();
+             if (cookie != null && cookie.Value.ToString() == "true")
+             {
+                 var cookie2 = Request.Cookies["respuesta"];
+                 if (cookie2 != null)
+                     ViewBag.Resultado = cookie2.Value.ToString();
+                 else
+                     ViewBag.Resultado = "";
+                 return View();
+             }
              else
-            //if (BLUP != null && Aplicacion == "MA")
-            //{
-            //    var ip = Request.UserHostAddress;
+             //if (BLUP != null && Aplicacion == "MA")
+             //{
+             //    var ip = Request.UserHostAddress;
 
-            //    if (IsTokenValido(BLUP, ip))
+             //    if (IsTokenValido(BLUP, ip))
              //       return View("Inbox");
-            //    else
-                {
-                    if (!flag)
-                        return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
-                    else
-                        return RedirectToAction("Login");
-                }
+             //    else
+             {
+                 if (!flag)
+                     return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                 else
+                     return RedirectToAction("Login");
+             }
            // }
             //else
             //{
@@ -111,9 +130,16 @@ namespace ULAPW.Controllers
         public ActionResult Completed()//(string BLUP, string Aplicacion)
         {
             var cookie = Request.Cookies["usr_logued"];
-             if (cookie != null && cookie.Value.ToString()=="true")
+            if (cookie != null && cookie.Value.ToString() == "true")
+            {
+                var cookie2 = Request.Cookies["respuesta"];
+                if (cookie2 != null)
+                    ViewBag.Resultado = cookie2.Value.ToString();
+                else
+                    ViewBag.Resultado = "";
                 return View();
-             else
+            }
+            else
             //if (BLUP != null && Aplicacion == "MA")
             //{
             //   // var flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
@@ -122,12 +148,12 @@ namespace ULAPW.Controllers
             //    if (IsTokenValido(BLUP, ip))
             //        return View("Completed");
             //    else
-                {
-                    if (!flag)
-                        return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
-                    else
-                        return RedirectToAction("Login");
-                }
+            {
+                if (!flag)
+                    return Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                else
+                    return RedirectToAction("Login");
+            }
             //}
             //else
             //{
@@ -144,7 +170,14 @@ namespace ULAPW.Controllers
             ViewBag.version = version;
             var cookie = Request.Cookies["usr_logued"];
             if (cookie != null && cookie.Value.ToString() == "true")
+            {
+                var cookie2 = Request.Cookies["respuesta"];
+                if (cookie2 != null)
+                    ViewBag.Resultado = cookie2.Value.ToString();
+                else
+                    ViewBag.Resultado = "";
                 return View();
+            }
             else
             {
                 if (!flag)

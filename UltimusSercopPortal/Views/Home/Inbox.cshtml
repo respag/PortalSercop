@@ -1,9 +1,10 @@
 ﻿@{
     ViewBag.Title = "Mis Procesos";
-    var entero = Request.Url.PathAndQuery;
-    var path = entero.Substring(entero.IndexOf('?') + 6);
-    ViewBag.BLUP = path.Substring(0, path.Length - 14);
+    //var entero = Request.Url.PathAndQuery;
+    //var path = entero.Substring(entero.IndexOf('?') + 6);
+    //ViewBag.BLUP = path.Substring(0, path.Length - 14);
 }
+
 
 @*@MiHelper.DevuelveDatosUsuario(ViewBag.Resultado)*@
 <input type="hidden" id="blupInitiate" value="~/Home/Initiate"/> @*?BLUP=@ViewBag.BLUP&Aplicacion=MA" />*@
@@ -73,7 +74,7 @@
     </table>
 </div>
 
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
 <script src="~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"></script>
 <script src="~/Scripts/moment-with-locales.min.js"></script>
 <script src="~/Scripts/app/scriptInbox.js"></script>

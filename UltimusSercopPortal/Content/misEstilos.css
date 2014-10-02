@@ -239,3 +239,22 @@ a#completed, a#completed:visited {
 #example tbody {
    cursor:pointer;
 }
+
+.noty_message {
+    border: 5px solid black;
+    /*box-shadow: 2px 2px 20px white;*/
+    border-radius: 20px;
+    background-color:#EEEEEE;
+    color:black;
+}
+
+#noty_center_layout_container li {
+    /*box-shadow: 2px 2px 20px white;*/
+    border-radius: 20px!important;
+    overflow:visible!important;
+}
+
+.noty_close {
+    top:10px!important;
+    right:10px!important;
+}

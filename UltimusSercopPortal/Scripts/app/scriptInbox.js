@@ -114,18 +114,27 @@ function devuelveEstadoTarea(st){
  }
 
 $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
+    var correo = $("#correo").text();
+    var rol = $("#rol").text();
+    var cedula = $("#cedula").text();
+    var empresa = $("#empresa").text();
+    var tipoEmpresa = ($("#tipoEmpr").text()).trim();
+    var ruc = $("#ruc").text();
     var id = $(this).parent().find("td:nth-child(10)").text()
-    var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id;
+
+    var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id +
+                                  "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol +
+                                  "&correo=" + correo;
+
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });
 
+
+// Al hacer click en la primera columna de cada fila (la imagen)
 $('#example').on('click', 'tbody tr td:first-child', function (event) {
     var baseURL = "http://192.168.110.10/PortalSercop/";
-    var nombre = $(this).parent().find("td:nth-child(2)").text(); //$('#example tbody tr td:nth-child(2)').text();
-    var inc = $(this).parent().find("td:nth-child(8)").text(); //$('#example tbody tr td:nth-child(8)').text()
-    var ver = $(this).parent().find("td:nth-child(9)").text(); //$('#example tbody tr td:nth-child(9)').text();
+    var nombre = $(this).parent().find("td:nth-child(2)").text(); 
+    var inc = $(this).parent().find("td:nth-child(8)").text();
+    var ver = $(this).parent().find("td:nth-child(9)").text();
     location.href = baseURL + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
-    //alert($(this).parent().find("td:nth-child(2)").text());
-    //alert($(this).parent().find("td:nth-child(8)").text());
-    //alert($(this).parent().find("td:nth-child(9)").text());
 });
