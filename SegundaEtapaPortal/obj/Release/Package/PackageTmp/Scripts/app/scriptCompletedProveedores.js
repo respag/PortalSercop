@@ -99,6 +99,8 @@ $(document).ready(function () {
             ],
         });
     });
+    //Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda 
+    $("#initiate, #initiate2").hide();
 });
 
 $('#example thead, #example tfoot').css({ "background-color": "#202020", "color": "white" });
@@ -116,15 +118,23 @@ function devuelveEstadoTarea(st) {
 }
 
 $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
-    var id = $(this).parent().find("td:nth-child(10)").text()
-    var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id;
+    var correo = $("#correo").text();
+    var rol = $("#rol").text();
+    var cedula = $("#cedula").text();
+    var empresa = $("#empresa").text();
+    var tipoEmpresa = ($("#tipoEmpr").text()).trim();
+    var ruc = $("#ruc").text();
+    var id = $(this).parent().find("td:nth-child(10)").text();
+
+    var url = rutaFormularios + "?UserID=" + domain + "/" +
+                     usr + "&TaskID=" + id + "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" +
+                   tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo;
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });
 
 $('#example').on('click', 'tbody tr td:first-child', function (event) {
-    var baseURL = "http://192.168.110.10/PortalSercop/";
     var nombre = $('#example tbody tr td:nth-child(2)').text();
     var inc = $('#example tbody tr td:nth-child(8)').text()
     var ver = $('#example tbody tr td:nth-child(9)').text();
-    location.href = baseURL + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+    location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
 });
