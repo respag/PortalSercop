@@ -1,0 +1,191 @@
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll.config
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\WebGrease.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\UltimusSercopPortal.csprojResolveAssemblyReference.cache
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll.config
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.pdb
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\WebGrease.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.pdb
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.xml
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\UltimusSercopPortal.csprojResolveAssemblyReference.cache
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.dll
+C:\Users\rspagnuolo\Source\Repos\UltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll.config
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\WebGrease.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Core.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.OData.Edm.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Microsoft.Spatial.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Net.Http.Formatting.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Http.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Helpers.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Mvc.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Optimization.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.Razor.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\System.Web.WebPages.Razor.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Antlr3.Runtime.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\Newtonsoft.Json.xml
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Core.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.OData.Edm.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\de\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\es\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\fr\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\it\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ja\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ko\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\ru\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hans\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\zh-Hant\Microsoft.Spatial.resources.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\obj\Debug\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\obj\Debug\UltimusSercopPortal.csprojResolveAssemblyReference.cache
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\InformationService.dll
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\COPIAUltimusSercopPortal\UltimusSercopPortal\bin\InformationService.pdb

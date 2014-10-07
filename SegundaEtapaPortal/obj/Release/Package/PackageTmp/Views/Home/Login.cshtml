@@ -1,0 +1,87 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ultimus Web Portal - @ViewBag.Title</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="accDenegado oculto">
+        <div class="row">
+            <div class="col-xs-4">
+                <h2>Ultimus Web Portal</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <h3>Acceso denegado</h3>
+                <p>Usted debe ingresar sus credenciales</p>
+                <a class="btn btn-warning" href="~/Home/Index">Volver a Ingresar<br />Credenciales</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="x">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <img class="img-responsive" src="~/images/logo.png" style="width:300px" />
+                </div>
+                <div class="modal-body">
+                    <h2 style="text-align:center"><i>Ultimus Portal Web</i></h2>
+                </div>
+
+                <table class="table table-responsive" style="background-color:#d9d7d7;">
+                    <tr>
+                        <td rowspan="3">
+                            <img src="~/images/grafo.png" id="grafo" class="img-responsive" style="width:150px" />
+                        </td>
+                        <td style="padding-left:20px">
+                            User ID:
+                        </td>
+                        <td>
+                            <input placeholder="User ID" class="form-control" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:20px">
+                            Password:
+                        </td>
+                        <td class="padd20">
+                            <input type="password" class="form-control" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:20px">
+                            Domain:
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" value="soce.int" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnClose">Simula log</button>
+                    <button type="button" class="btn btn-default" id="btnLogon">Logon</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/app/script.js"></script>
+</body>
+</html>

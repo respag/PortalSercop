@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Muestra del Proceso: " +  ViewBag.processName;
+    var nombre = ViewBag.processName+ViewBag.incidente+ViewBag.version + ".gif";
+}
+
+<input type="hidden" id="blupInitiate" value="~/Home/Initiate" />
+<input type="hidden" id="blup" value="~/Home/inbox" />
+<input type="hidden" id="blupCompleted" value="~/Home/completed" />
+<img src="~/images/@nombre" class="img-responsive" id="imgProc"/>
+<script>
+    $(document).ready(function () {
+        $("#imgProc").css("cursor", "pointer");
+
+        $("#imgProc").click(function () {
+            window.open($(this).attr('src'), "newWindow", "height=" + screen.height + ", width =" + screen.width);
+        })
+    });
+</script>

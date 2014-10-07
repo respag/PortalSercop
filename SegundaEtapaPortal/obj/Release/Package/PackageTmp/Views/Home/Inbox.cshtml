@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Mis Procesos";
+}
+
+<input type="hidden" id="blupInitiate" value="~/Home/Initiate" /> 
+<input type="hidden" id="blup" value="~/Home/inbox" /> 
+<input type="hidden" id="blupCompleted" value="~/Home/completed" />
+
+<style>
+    .alignCenter {
+        text-align: center;
+    }
+
+    .alignLeft {
+        text-align: left;
+    }
+</style>
+
+<div class="row">
+    <table class="table table-responsive" id="example">
+        <thead>
+            <tr>
+                <th>Ver Estado</th>
+                <th>Procedimiento</th>
+                <th>Nombre Tarea</th>
+                <th>Código Proceso</th>
+                <th>Vencimiento</th>
+                <th>Estado</th>
+                <th>Descripción</th>
+                <th>Incidente</th>
+                <th>Versión</th>
+                <th class="urlOpen">ID</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Ver Estado</th>
+                <th>Procedimiento</th>
+                <th>Nombre de Tarea</th>
+                <th>Código del Proceso</th>
+                <th>Fecha Vencimiento</th>
+                <th>Estado de la Tarea</th>
+                <th>Descripción del Proceso</th>
+                <th>Incidente</th>
+                <th>Versión</th>
+                <th class="urlOpen">ID</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/moment-with-locales.min.js"></script>
+<script src="~/Scripts/app/scriptInbox.js"></script>
+
+<script>
+    var addrApi = '@System.Web.Configuration.WebConfigurationManager.AppSettings["AddrApi"]';
+    var baseUrl = '@System.Web.Configuration.WebConfigurationManager.AppSettings["BaseUrl"]';
+    var rutaFormularios = '@System.Web.Configuration.WebConfigurationManager.AppSettings["RutaFormularios"]';
+</script>

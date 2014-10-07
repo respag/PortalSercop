@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Iniciar Procesos";
+}
+
+<input type="hidden" id="blupInitiate" value="~/Home/Initiate" />
+<input type="hidden" id="blup" value="~/Home/inbox"/>
+<input type="hidden" id="blupCompleted" value="~/Home/completed" />
+
+<style>
+    table tbody tr td:last-child {
+        display: none;
+    }
+
+    .urlOpen {
+        display: none;
+    }
+
+    .alignCenter {
+        text-align: center;
+    }
+
+    .alignLeft {
+        text-align: left;
+    }
+</style>
+
+<div class="row">
+    <table id="example" class="display table table-responsive" cellspacing="0" style="width:100%">
+        <thead>
+            <tr>
+                <th class="alignLeft">Procedimiento</th>
+                <th>Versión</th>
+                <th class="alignLeft">Nombre de la Tarea</th>
+                <th class="urlOpen">Url</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <th class="alignLeft">Procedimiento</th>
+                <th>Versión</th>
+                <th class="alignLeft">Nombre de la Tarea</th>
+                <th class="urlOpen">Url</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/app/scriptInitiate.js"></script>
+
+<script>
+    var addrApi = '@System.Web.Configuration.WebConfigurationManager.AppSettings["AddrApi"]';
+    var rutaFormularios = '@System.Web.Configuration.WebConfigurationManager.AppSettings["RutaFormularios"]';
+    var ip = '@ViewBag.Ip';
+</script>
