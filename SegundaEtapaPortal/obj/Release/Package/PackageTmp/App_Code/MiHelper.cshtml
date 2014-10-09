@@ -1,4 +1,11 @@
-﻿@helper DevuelveUsuario(string cadena)
+﻿<!--
+************************************************************
+* Copyright © Ultimus.                                     *
+* Diseño y desarrollo: Rubén Enrique Spagnuolo (respag)    *
+* Panamá - 2014                                            *
+************************************************************
+-->
+@helper DevuelveUsuario(string cadena)
 {
     if (cadena != null && cadena != String.Empty)
     {
@@ -7,6 +14,10 @@
         var cedula = arr[2];
         var Ruc = arr[3];
         var Rol = arr[4];
+        var IDSercopEmpresa = arr[5];
+        var IDUltimusEmpresa = arr[6];
+        var IDSercopSucursal = arr[7];
+        var IDUltimusSucursal = arr[8];
 
         InformationService.ServiceReference.InformationServiceClient client = new InformationService.ServiceReference.InformationServiceClient();
         var resultado = client.GetDepartmentByRuc(Ruc);
@@ -16,9 +27,7 @@
         var dslogin = new ULAPW.ServiceEasyLogin.DSLogin();
         var svc = new ULAPW.ServiceEasyLogin.WSEasyLoginSoapClient();
         svc.getUserByNombreCorto(@nombre, ref dslogin);
-        var email = dslogin.Tables[1].Rows[0]["Email"];
-
-        
+        var email = dslogin.Tables[1].Rows[0]["Email"];       
         
         @nombre
         <p id="datos" style="display:none">
@@ -33,19 +42,11 @@
             </span><br /><br />
             Tipo de Empresa: <span id="tipoEmpr">@TipoCompleto(TipoEmpresa)</span> <br />
             RUC: <span id="ruc">@Ruc</span><br /><br />
+            <span id="IDSercopEmpresa" class="hidden">@IDSercopEmpresa</span>
+            <span id="IDUltimusEmpresa" class="hidden">@IDUltimusEmpresa</span>
+            <span id="IDSercopSucursal" class="hidden">@IDSercopSucursal</span>
+            <span id="IDUltimusSucursal" class="hidden">@IDUltimusSucursal</span>
         </p>
-      
-    @*   //var fn = (function () {
-            //    if (($("#tipoEmpr").text()).trim() === "Proveedor") {
-            //        //alert(base);
-            //        location.href = base + 'home/InboxProveedores';
-            //    }
-            //}).once();
-            //fn();
-            //if (($("#tipoEmpr").text()).trim() === "Proveedor") {
-            //    alert(base);
-            //    location.href = base + 'home/InboxProveedores';
-            //}*@
     }
 }
 

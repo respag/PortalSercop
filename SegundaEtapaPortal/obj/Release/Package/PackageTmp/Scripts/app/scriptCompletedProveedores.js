@@ -1,6 +1,15 @@
 ﻿/// <reference path="../moment-with-locales.min.js" />
 /// <reference path=""~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"/>
-// var domain = "soce.int";
+
+/*
+************************************************************
+* Copyright © Ultimus.                                     *
+* Diseño y desarrollo: Rubén Enrique Spagnuolo (respag)    *
+* Panamá - 2014                                            *
+************************************************************
+*/
+var domain = "soce.int";
+var usuario = "alfresco"
 
 // Si es un proveedor usamos un usuario generico ("usuarioProveedor")
 var usr = "usuarioProveedor";
@@ -125,10 +134,16 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
     var tipoEmpresa = ($("#tipoEmpr").text()).trim();
     var ruc = $("#ruc").text();
     var id = $(this).parent().find("td:nth-child(10)").text();
+    var idSercopEmpresa = $("#IDSercopEmpresa").text();
+    var idUltimusEmpresa = $("#IDUltimusEmpresa").text();
+    var idSercopSucursal = $("#IDSercopSucursal").text();
+    var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
     var url = rutaFormularios + "?UserID=" + domain + "/" +
-                     usr + "&TaskID=" + id + "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" +
-                   tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo;
+                   usuario + "&TaskID=" + id + "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" +
+                   tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
+                   "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
+                   "&SercopSucursal=" + idSercopSucursal + "&UltimusSucursal=" + idUltimusSucursal;
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });
 

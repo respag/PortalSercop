@@ -91,10 +91,16 @@ $(document).ready(function () {
         var tipoEmpresa = ($("#tipoEmpr").text()).trim();
         var ruc = $("#ruc").text();
         var tId = ($(this).find('td:last').text()).substring(52, 83);
+        var idSercopEmpresa = $("#IDSercopEmpresa").text();
+        var idUltimusEmpresa = $("#IDUltimusEmpresa").text();
+        var idSercopSucursal = $("#IDSercopSucursal").text();
+        var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
         var dir = rutaFormularios + "?UserID=" + domain + "/" + usr + "&TaskID=" + tId +
                      "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa +
-                     "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo;
+                     "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
+                     "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
+                     "&SercopSucursal=" + idSercopSucursal + "&UltimusSucursal=" + idUltimusSucursal;
 
         window.open(dir, "newWindow", "height=" + screen.height + ", width =" + screen.width);
     });

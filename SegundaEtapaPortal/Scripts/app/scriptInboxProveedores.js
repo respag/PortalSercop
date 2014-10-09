@@ -1,6 +1,7 @@
 ﻿/// <reference path="../moment-with-locales.min.js" />
 /// <reference path=""~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"/>
-//var domain = "soce.int";
+var domain = "soce.int";
+var usuario = "alfresco";
 
 // Si es un proveedor usamos un usuario generico ("usuarioProveedor")
 var usr = "usuarioProveedor";
@@ -124,11 +125,17 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
     var empresa = $("#empresa").text();
     var tipoEmpresa = ($("#tipoEmpr").text()).trim();
     var ruc = $("#ruc").text();
-    var id = $(this).parent().find("td:nth-child(10)").text()
+    var id = $(this).parent().find("td:nth-child(10)").text();
+    var idSercopEmpresa = $("#IDSercopEmpresa").text();
+    var idUltimusEmpresa = $("#IDUltimusEmpresa").text();
+    var idSercopSucursal = $("#IDSercopSucursal").text();
+    var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
-    var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" + usr + "&TaskID=" + id +
-                                  "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol +
-                                  "&correo=" + correo;
+    var url = "http://192.168.110.10/Ultimus.Sercop.Compartidos/FrmUltimus.aspx?UserID=" + domain + "/" +
+                     usuario + "&TaskID=" + id +
+                    "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol +
+                    "&correo=" + correo + "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
+                    "&SercopSucursal=" + idSercopSucursal + "&UltimusSucursal=" + idUltimusSucursal;
 
     window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
 });

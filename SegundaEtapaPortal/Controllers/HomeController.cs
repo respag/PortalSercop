@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+************************************************************
+* Copyright © Ultimus.                                     *
+* Diseño y desarrollo: Rubén Enrique Spagnuolo (respag)    *
+* Panamá - 2014                                            *
+************************************************************
+*/
+using System;
 using System.Configuration;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Ultimus.WFServer;
-
 
 namespace ULAPW.Controllers
 {
