@@ -144,7 +144,7 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
                    tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
                    "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
                    "&SercopSucursal=" + idSercopSucursal + "&UltimusSucursal=" + idUltimusSucursal;
-    window.open(url, "newWindow", "height=" + screen.height + ", width =" + screen.width);
+    window.open(url, "newWindow", "scrollbars=yes, height=" + screen.height + ", width =" + screen.width);
 });
 
 $('#example').on('click', 'tbody tr td:first-child', function (event) {

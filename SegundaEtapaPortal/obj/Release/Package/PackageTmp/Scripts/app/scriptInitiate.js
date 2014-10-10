@@ -102,6 +102,6 @@ $(document).ready(function () {
                      "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
                      "&SercopSucursal=" + idSercopSucursal + "&UltimusSucursal=" + idUltimusSucursal;
 
-        window.open(dir, "newWindow", "height=" + screen.height + ", width =" + screen.width);
+        window.open(dir, "newWindow", "scrollbars=yes, height=" + screen.height + ", width =" + screen.width);
     });
 });
