@@ -60,6 +60,6 @@ C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\Seg
 C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\bin\ru\Microsoft.Spatial.resources.dll
 C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\bin\zh-Hans\Microsoft.Spatial.resources.dll
 C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\bin\zh-Hant\Microsoft.Spatial.resources.dll
-C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\obj\Debug\SegundaEtapaPortal.csprojResolveAssemblyReference.cache
 C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\obj\Debug\ULAPW.dll
 C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\obj\Debug\ULAPW.pdb
+C:\Users\rspagnuolo\Documents\Visual Studio 2013\Projects\SegundaEtapaPortal\SegundaEtapaPortal\obj\Debug\SegundaEtapaPortal.csprojResolveAssemblyReference.cache

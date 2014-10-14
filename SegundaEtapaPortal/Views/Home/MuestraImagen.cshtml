@@ -16,9 +16,11 @@
 <img src="~/images/@nombre" class="img-responsive" id="imgProc"/>
 <script>
     $(document).ready(function () {
-        //Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda 
-        $("#initiate, #initiate2").hide();
-
+        // Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda en
+        // caso de tratarse de un proveedor
+        if('@ViewBag.Oculta.ToString()' === "si"){
+            $("#initiate, #initiate2").hide()
+         };
         $("#imgProc").css("cursor", "pointer");
 
         $("#imgProc").click(function () {

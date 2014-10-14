@@ -143,9 +143,9 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
 
 // Al hacer click en la primera columna de cada fila (la imagen)
 $('#example').on('click', 'tbody tr td:first-child', function (event) {
-    var baseURL = "http://192.168.110.10/PortalSercop/";
+  //  var baseURL = "http://192.168.110.10/PortalSercop/";
     var nombre = $(this).parent().find("td:nth-child(2)").text();
     var inc = $(this).parent().find("td:nth-child(8)").text();
     var ver = $(this).parent().find("td:nth-child(9)").text();
-    location.href = baseURL + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+    location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
 });

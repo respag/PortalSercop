@@ -264,6 +264,13 @@ namespace ULAPW.Controllers
                     ViewBag.Resultado = cookie2.Value.ToString();
                 else
                     ViewBag.Resultado = "";
+                var cookie3 = Request.Cookies["tipo"];
+                ViewBag.Oculta = "no";
+                if (cookie3 != null)
+                {
+                    if (cookie3.Value.ToString() == "PRO")
+                        ViewBag.Oculta = "si";
+                }
                 return View();
             }
             else
