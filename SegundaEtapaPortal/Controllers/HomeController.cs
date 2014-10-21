@@ -1,4 +1,5 @@
-﻿/*
+﻿using Microsoft.Win32;
+/*
 ************************************************************
 * Copyright © Ultimus.                                     *
 * Diseño y desarrollo: Rubén Enrique Spagnuolo (respag)    *
@@ -13,14 +14,41 @@ using System.Web.Mvc;
 using Ultimus.WFServer;
 
 namespace ULAPW.Controllers
-{
+{ 
     public class HomeController : Controller
     {
+      
+        public string GetValueKeyRegedit(string k ,string KeyStringValue)
+        {
+            string retorno = string.Empty;
+            try
+            {
+                RegistryKey localMachineRegistry = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine,
+                                       Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32);
+                RegistryKey rk = localMachineRegistry.OpenSubKey(string.Format(@"SOFTWARE\\{0}", k, false));
+                if (rk != null)
+                {
+                    retorno = (string)rk.GetValue(KeyStringValue);
+                    rk.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                retorno = string.Empty;
+
+            }
+            return retorno;
+
+        }
+
         // Verica si usar loguin de ultimus o particular
         bool flag = Convert.ToBoolean(ConfigurationManager.AppSettings["FlagUltimusLogin"]);
 
         public ActionResult Index(string BLUP, string Aplicacion)
         {
+            string dominio = GetValueKeyRegedit("ParametrosProcesoUltimus", "DominioCustomOc");
+            ViewBag.Dominio = dominio;
+
             // En caso que el flag sea  falso , como en el caso de SERCOP...
             if (!flag)
             {
@@ -85,6 +113,9 @@ namespace ULAPW.Controllers
 
         public ActionResult Initiate()
         {
+            string dominio = GetValueKeyRegedit("ParametrosProcesoUltimus", "DominioCustomOc");
+            ViewBag.Dominio = dominio;
+
             // Verifica a traves de la cookie si el usuario esta logueado
              var cookie = Request.Cookies["usr_logued"];
              if (cookie != null && cookie.Value.ToString() == "true")
@@ -132,6 +163,9 @@ namespace ULAPW.Controllers
 
         public ActionResult Inbox()
         {
+            string dominio = GetValueKeyRegedit("ParametrosProcesoUltimus", "DominioCustomOc");
+            ViewBag.Dominio = dominio;
+
             // Si existe la cookie de autenticacion
             var cookie = Request.Cookies["usr_logued"];
             if (cookie != null && cookie.Value.ToString() == "true")
@@ -194,6 +228,9 @@ namespace ULAPW.Controllers
 
         public ActionResult Completed()
         {
+            string dominio = GetValueKeyRegedit("ParametrosProcesoUltimus", "DominioCustomOc");
+            ViewBag.Dominio = dominio;
+
             var cookie = Request.Cookies["usr_logued"];
             if (cookie != null && cookie.Value.ToString() == "true")
             {
@@ -294,4 +331,5 @@ namespace ULAPW.Controllers
             fs.Close();
         }
     }
+
 }

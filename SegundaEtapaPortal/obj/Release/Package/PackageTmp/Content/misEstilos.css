@@ -205,20 +205,58 @@ label {
     color:black;
     font-size:11px;
     width:150px;
-    margin-left:25px;
+    /*margin-left:25px;*/
+    position:fixed;
+    bottom:0;
+    margin-bottom:30px;
+    margin-left:15px;
 }
 
-.wen {
+.webkit .powered {
+ text-align:center;
+    border-radius:5px;
+    height:120px;
+    background-color:white;
+    color:black;
+    font-size:11px;
+    width:150px;
+    position:absolute;
+    bottom:130px;
+    margin-bottom:0;
+    margin-left:15px;
+}
+
+.ie .wen, .gecko.wen, .opera .wen {
     background-color: #444444;
     color:white!important;
     border-radius:5px;
-    margin-left:5px;
     margin-right:5px;
     text-shadow: none;
     width:200px;
-    height:265px;
-    padding-left:5px;
+    height:100%;
+    margin-top:50px;
+    margin-left:2px;
+    padding-left:12px;
+    padding-bottom:30px;
+    padding-top:30px;
 }
+
+.webkit .wen {
+    background-color: #444444;
+    color:white!important;
+    border-radius:5px;
+    margin-right:5px;
+    text-shadow: none;
+    width:200px;
+    height:81vh;
+    margin-top:15px;
+    margin-bottom:75px;
+    margin-left:2px;
+    padding-left:12px;
+    padding-bottom:30px;
+    padding-top:30px;
+}
+
 a#initiate, a#initiate:visited ,
 a#inbox, a#inbox:visited,
 a#completed, a#completed:visited {

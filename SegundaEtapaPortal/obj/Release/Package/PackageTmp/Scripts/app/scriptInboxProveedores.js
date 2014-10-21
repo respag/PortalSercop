@@ -1,13 +1,13 @@
 ﻿/// <reference path="../moment-with-locales.min.js" />
 /// <reference path=""~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"/>
-var domain = "soce.int";
-var usuario = "alfresco";
+//var domain = "soce.int";
+//var usuario = "alfresco";
 
 // Si es un proveedor usamos un usuario generico ("usuarioProveedor")
 var usr = "usuarioProveedor";
 $(document).ready(function () {
     var flag = true;
-    $.getJSON(addrApi + "api/InboxProveedores/" + usr, function (data) {
+    $.getJSON(addrApi + "api/InboxProveedores/" + dom + "/" + usr, function (data) {
         var obj = data;
         var oTable = $('#example').dataTable({
             language: {
@@ -67,6 +67,10 @@ $(document).ready(function () {
                 $("#example_wrapper #example_length").css({ "float": "left" });
 
                 $("#example_wrapper #example_filter").css("float", "right");
+
+                //Si no hay elementos en la tabla entonces cambia el cursor al normal
+                if ($("b.medalla").text() == "")
+                    $("#example tbody").css("cursor", "default");
             },
 
             //Esta función permite un " post proceso" de cada fila después de que se ha generado 
@@ -143,9 +147,9 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
 
 // Al hacer click en la primera columna de cada fila (la imagen)
 $('#example').on('click', 'tbody tr td:first-child', function (event) {
-  //  var baseURL = "http://192.168.110.10/PortalSercop/";
     var nombre = $(this).parent().find("td:nth-child(2)").text();
     var inc = $(this).parent().find("td:nth-child(8)").text();
     var ver = $(this).parent().find("td:nth-child(9)").text();
-    location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+    if (inc !== "")
+        location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
 });

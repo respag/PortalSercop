@@ -27,6 +27,19 @@
     <script src="~/Scripts/sugar.js"></script>
     <script>
         var base = '@System.Web.Configuration.WebConfigurationManager.AppSettings["BaseUrl"]';
+        var dom = '@ViewBag.Dominio';
+        //var usr = $("#nombre").text().substring(0, 30).trim();
+        //var usr = $("#nombre").text().substring(0, 30).trim();
+    </script>
+    <script type="text/javascript">
+        var css_browser_selector = function () {
+            var ua = navigator.userAgent.toLowerCase(),
+            is = function (t) { return ua.indexOf(t) != -1; },
+            h = document.getElementsByTagName('html')[0],
+            b = (!(/opera|webtv/i.test(ua)) && /msie (\d)/.test(ua)) ? ('ie ie' + RegExp.$1) : is('firefox/2') ? 'gecko ff2' : is('firefox/3') ? 'gecko ff3' : is('gecko/') ? 'gecko' : is('opera/9') ? 'opera opera9' : /opera (\d)/.test(ua) ? 'opera opera' + RegExp.$1 : is('konqueror') ? 'konqueror' : is('applewebkit/') ? 'webkit safari' : is('mozilla/') ? 'gecko' : '',
+            os = (is('x11') || is('linux')) ? ' linux' : is('mac') ? ' mac' : is('win') ? ' win' : '';
+            var c = b + os + ' js'; h.className += h.className ? ' ' + c : c;
+    }();
     </script>
 </head>
 
@@ -56,7 +69,7 @@
                 <span class="text-left lead">@ViewBag.Title</span>
                 <a href="#user" data-toggle="tooltip" class="botones lead" style="float:right" id="linkUsuario"
                    data-original-title="Datos del Usuario ">
-                    <i class="fa fa-user fa-lg"></i> <span>@MiHelper.DevuelveUsuario(@ViewBag.Resultado)</span>
+                    <i class="fa fa-user fa-lg"></i> <span id="nombre">@MiHelper.DevuelveUsuario(@ViewBag.Resultado)</span>
                 </a>
             </div>
             <div data-demo-html="#panel-responsive-page1">

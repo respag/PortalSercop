@@ -8,11 +8,10 @@
 * Panamá - 2014                                            *
 ************************************************************
 */
-var domain = "soce.int";
- var usr = "alfresco";
- $(document).ready(function () {
+$(document).ready(function () {
      var flag = true;
-     $.getJSON(addrApi + "api/Inbox/" + domain + "/" + usr, function (data) {
+     var usr = $("#nombre").text().substring(0, 30).trim();
+     $.getJSON(addrApi + "api/Inbox/" + dom + "/" + usr, function (data) {
          var obj = data;
          var oTable = $('#example').dataTable({
              language: {
@@ -72,6 +71,10 @@ var domain = "soce.int";
                  $("#example_wrapper #example_length").css({ "float": "left" });
 
                  $("#example_wrapper #example_filter").css("float", "right");
+
+                 //Si no hay elementos en la tabla entonces cambia el cursor al normal
+                 if ($("b.medalla").text() == "")
+                     $("#example tbody").css("cursor", "default");
              },
 
              //Esta función permite un " post proceso" de cada fila después de que se ha generado 
@@ -148,5 +151,6 @@ $('#example').on('click', 'tbody tr td:first-child', function (event) {
     var nombre = $(this).parent().find("td:nth-child(2)").text(); 
     var inc = $(this).parent().find("td:nth-child(8)").text();
     var ver = $(this).parent().find("td:nth-child(9)").text();
-    location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+    if (inc !== "")
+        location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
 });

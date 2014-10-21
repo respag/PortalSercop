@@ -35,7 +35,7 @@ $(window).resize(function () {
     console.log($(window).width());
 });
 
-
+ 
 //***************************************************************
 $(document).ready(function () {
     $("#nav-panel").panel("open");

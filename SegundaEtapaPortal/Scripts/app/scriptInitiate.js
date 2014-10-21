@@ -1,12 +1,16 @@
 ﻿/// <reference path="../jquery-1.10.2.js" />
 /// <reference path=""~/Scripts/DataTables-1.10.2/jquery.dataTables.min.js"/>
-var domain = "soce.int";
-var usr = "alfresco";
+//var domain = "soce.int";
+//var domain = dom;
+//var usr = "alfresco";
 
 $(document).ready(function () {
+    
     console.log(ip);
+    var usr =$("#nombre").text().substring(0, 30).trim();
     var flag = true;
-    $.getJSON(addrApi + "api/Initiates/" + domain + "/" + usr, function (data) {
+    //alert(dom);
+    $.getJSON(addrApi + "api/Initiates/" + dom + "/" + usr, function (data) {
     var obj = jQuery.parseJSON(data)
 
         var oTable = $('#example').dataTable({
@@ -67,6 +71,10 @@ $(document).ready(function () {
                 $("#example_wrapper #example_length").css({ "float": "left" });
 
                 $("#example_wrapper #example_filter").css("float", "right");
+
+                //Si no hay elementos en la tabla entonces cambia el cursor al normal
+                if ($("b.medalla").text()=="")
+                    $("#example tbody").css("cursor", "default");
             },
             "aLengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50]],
             "iDisplayLength": 10,
@@ -96,7 +104,7 @@ $(document).ready(function () {
         var idSercopSucursal = $("#IDSercopSucursal").text();
         var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
-        var dir = rutaFormularios + "?UserID=" + domain + "/" + usr + "&TaskID=" + tId +
+        var dir = rutaFormularios + "?UserID=" + dom + "/" + usr + "&TaskID=" + tId +
                      "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" + tipoEmpresa +
                      "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
                      "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
