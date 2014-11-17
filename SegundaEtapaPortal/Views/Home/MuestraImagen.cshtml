@@ -13,7 +13,8 @@
 <input type="hidden" id="blupInitiate" value="~/Home/Initiate" />
 <input type="hidden" id="blup" value="~/Home/inbox" />
 <input type="hidden" id="blupCompleted" value="~/Home/completed" />
-<img src="~/images/@nombre" class="img-responsive" id="imgProc"/>
+<img src="~/images/@nombre" class="img-responsive" id="imgProc" style="cursor:pointer"/>
+<h4>Haga click  sobre la imagen para ampliarla</h4>
 <script>
     $(document).ready(function () {
         // Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda en
@@ -21,7 +22,7 @@
         if('@ViewBag.Oculta.ToString()' === "si"){
             $("#initiate, #initiate2").hide()
         };
-        alert($("#imgProc").attr("src"));
+        //alert($("#imgProc").attr("src"));
 
         $("#imgProc").click(function () {
             window.open($(this).attr('src'), "newWindow", "scrollbars=yes, height=" + screen.height + ", width =" + screen.width);

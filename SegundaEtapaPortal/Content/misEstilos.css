@@ -306,3 +306,7 @@ a#completed, a#completed:visited {
     top:10px!important;
     right:10px!important;
 }
+
+.columnaOculta {
+    display:none;
+}

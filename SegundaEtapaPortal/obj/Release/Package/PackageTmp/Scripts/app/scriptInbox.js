@@ -8,9 +8,10 @@
 * Panamá - 2014                                            *
 ************************************************************
 */
+var usr = $("#nombre").text().substring(0, 30).trim();
 $(document).ready(function () {
      var flag = true;
-     var usr = $("#nombre").text().substring(0, 30).trim();
+   
      $.getJSON(addrApi + "api/Inbox/" + dom + "/" + usr, function (data) {
          var obj = data;
          var oTable = $('#example').dataTable({
@@ -102,9 +103,9 @@ $(document).ready(function () {
                  { "mData": "FechaProgramada" },
                  { "mData": "STATUS", "sClass": "alignCenter" },
                  { "mData": "ObjetoContratacion" },
-                 { "mData": "INCIDENT" },
-                 { "mData": "PROCESSVERSION" },
-                 { "mData": "TASKID" }
+                 { "mData": "INCIDENT", "sClass": "columnaOculta" },
+                 { "mData": "PROCESSVERSION", "sClass": "columnaOculta" },
+                 { "mData": "TASKID", "sClass": "columnaOculta" }
              ],
          });
      });
@@ -137,7 +138,7 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
     var idSercopSucursal = $("#IDSercopSucursal").text();
     var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
-    var url = rutaFormularios + "?UserID=" + domain + "/" +
+    var url = rutaFormularios + "?UserID=" + dom + "/" +
                       usr + "&TaskID=" + id + "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" +
                       tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
                       "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +

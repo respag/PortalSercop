@@ -103,9 +103,9 @@ $(document).ready(function () {
                 { "mData": "FechaProgramada", bSortable: false },
                 { "mData": "STATUS", "sClass": "alignCenter", bSortable: false },
                 { "mData": "ObjetoContratacion", bSortable: false },
-                { "mData": "INCIDENT", bSortable: false },
-                { "mData": "PROCESSVERSION", bSortable: false },
-                { "mData": "TASKID", bSortable: false }
+                { "mData": "INCIDENT", "sClass": "columnaOculta"},
+                { "mData": "PROCESSVERSION", "sClass": "columnaOculta" },
+                { "mData": "TASKID", "sClass": "columnaOculta" }
             ],
         });
     });
@@ -138,7 +138,7 @@ $('#example').on('click', 'tbody tr td:not(:first-child)', function (event) {
     var idSercopSucursal = $("#IDSercopSucursal").text();
     var idUltimusSucursal = $("#IDUltimusSucursal").text();
 
-    var url = rutaFormularios + "?UserID=" + +domain + "/" +
+    var url = rutaFormularios + "?UserID=" + dom + "/" +
                    usr + "&TaskID=" + id + "&empresa=" + empresa + "&ruc=" + ruc + "&tipoEmpresa=" +
                    tipoEmpresa + "&cedula=" + cedula + "&rol=" + rol + "&correo=" + correo +
                    "&SercopEmpresa=" + idSercopEmpresa + "&UltimusEmpresa=" + idUltimusEmpresa +
