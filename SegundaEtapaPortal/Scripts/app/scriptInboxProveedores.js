@@ -6,6 +6,7 @@
 // Si es un proveedor usamos un usuario generico ("usuarioProveedor")
 var usr = "usuarioProveedor";
 $(document).ready(function () {
+    console.log(ip);
     var flag = true;
     $.getJSON(addrApi + "api/InboxProveedores/" + dom + "/" + usr, function (data) {
         var obj = data;
@@ -105,7 +106,7 @@ $(document).ready(function () {
         });
     });
     //Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda 
-    $("#initiate, #initiate2").hide();
+   // $("#initiate, #initiate2").hide();
 });
 
 $('#example thead, #example tfoot').css({ "background-color": "#202020", "color": "white" });

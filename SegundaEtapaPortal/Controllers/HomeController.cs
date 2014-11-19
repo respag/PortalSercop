@@ -78,10 +78,10 @@ namespace ULAPW.Controllers
                         var tiempoExpiracion = ConfigurationManager.AppSettings["ExpiracionEnSegundos"];
                         cookie3.Expires = DateTime.Now.AddSeconds(Convert.ToDouble(tiempoExpiracion));
                         Response.AppendCookie(cookie3);
-                        if (TipoEmpresa == "ENT")
+                        //if (TipoEmpresa == "ENT")
                             return View("Initiate");
-                        else
-                            return View("InboxProveedores");
+                      //  else
+                       //     return View("InboxProveedores");
                     }
                     // Si el token no es válido, ya expiró o hay algun problema
                     else

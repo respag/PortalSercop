@@ -113,7 +113,7 @@ $(document).ready(function () {
         });
     });
     //Oculta el botón Initiate arriba y el link Iniciar Procesos a la izquierda 
-    $("#initiate, #initiate2").hide();
+   // $("#initiate, #initiate2").hide();
 });
 
 $('#example thead, #example tfoot').css({ "background-color": "#202020", "color": "white" });
