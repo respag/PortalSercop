@@ -894,9 +894,9 @@
         _meridiemParse : /[ap]\.?m?\.?/i,
         meridiem : function (hours, minutes, isLower) {
             if (hours > 11) {
-                return isLower ? 'pm' : 'PM';
+                return isLower ? 'pm' : 'P.M.';
             } else {
-                return isLower ? 'am' : 'AM';
+                return isLower ? 'am' : 'A.M.';
             }
         },
 

@@ -150,7 +150,12 @@ namespace ULAPW.Controllers
                 return false;
             // caso contrario creo la segunda cookie con la respuesta y el metodo devuelve true
             else
-            {   
+            {
+                if (resp.Length < 20)
+                {
+                   // Response.Redirect(ConfigurationManager.AppSettings["EasyLoginUrl"]);
+                    return false;
+                }
                 ViewBag.Resultado = resp;
                 var cookie2 = new HttpCookie("respuesta", resp);
                 var tiempoExperacion = ConfigurationManager.AppSettings["ExpiracionEnSegundos"];

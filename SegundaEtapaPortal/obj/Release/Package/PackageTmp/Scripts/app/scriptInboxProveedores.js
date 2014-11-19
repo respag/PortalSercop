@@ -84,7 +84,7 @@ $(document).ready(function () {
                 // la columna Status
                 $('td:eq(5)', nRow).text(devuelveEstadoTarea(parseInt(aData["STATUS"])));
                 //Selecciona la cuarta columna para cada fila y formatea la fecha en el formato dd/MM/yyyy.
-                $('td:eq(4)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY'));
+                $('td:eq(4)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY hh:mm A'));
             },
             "aLengthMenu": [[2, 5, 10], [2, 5, 10]],
             "iDisplayLength": 5,

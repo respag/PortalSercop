@@ -455,6 +455,12 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\edmundo.pubxml" />
+    <Content Include="Scripts\moment-with-locales.min.js.map">
+      <DependentUpon>moment-with-locales.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.min.js.map">
+      <DependentUpon>moment.min.js</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -670,9 +676,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61220</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61220/</IISUrl>
+          <IISUrl>http://localhost:61221/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:61220/</IISAppRootUrl>
+          <IISAppRootUrl>http://localhost:61221/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

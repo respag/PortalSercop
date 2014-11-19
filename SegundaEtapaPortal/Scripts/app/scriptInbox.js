@@ -89,9 +89,9 @@ $(document).ready(function () {
                  //// la columna Status
                  //$('td:eq(5)', nRow).text(devuelveEstadoTarea(parseInt(aData["STATUS"])));
                  ////Selecciona la cuarta columna para cada fila y formatea la fecha en el formato dd/MM/yyyy.
-                 $('td:eq(4)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY'));
+                 $('td:eq(4)', nRow).text(moment.parseZone(aData["FechaProgramada"]).format('DD-MM-YYYY hh:mm A'));
              },
-             "aLengthMenu": [[2, 5, 10], [2, 5, 10]],
+             "aLengthMenu": [[5,10, 25, 50], [5, 10, 25, 50]],
              "iDisplayLength": 5,
              "aaData": obj,
              "order": [],
@@ -153,5 +153,6 @@ $('#example').on('click', 'tbody tr td:first-child', function (event) {
     var inc = $(this).parent().find("td:nth-child(8)").text();
     var ver = $(this).parent().find("td:nth-child(9)").text();
     if (inc !== "")
-        location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+        //location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.replace(" ", "+").trim() + "&incidente=" + inc + "&version=" + ver;
+        location.href = baseUrl + "home/MuestraImagen?processName=" + nombre.split(" ").join('+').trim() + "&incidente=" + inc + "&version=" + ver;
 });
